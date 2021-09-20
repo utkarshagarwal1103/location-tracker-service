@@ -1,0 +1,7 @@
+server:
+  servlet:
+    context-path: /which/location-tracker-service
+
+com:
+  which:
+    url: http://whic-technical-exercise.herokuapp.com
