@@ -28,12 +28,23 @@ API Details
    {
     "emailId": <Email id>
    }
+   example- 
+   {
+    "emailId": "test@gmail.com"
+   }
   
   Response Body -
   {
     "coordinates": {
-        "x": <Integer Value>,
-        "y": <Integer Value>
+        "x": Integer_Value,
+        "y": Integer_Value
+    }
+  }
+  example- 
+   {
+    "coordinates": {
+        "x": 5,
+        "y": 2
     }
   }
   
@@ -51,6 +62,12 @@ API Details
     "timestamp": "2021-09-20T23:38:23.3123913",
     "message": "<ErrorCode> - Application Error"
    }
+   example -
+   {
+    "timestamp": "2021-09-20T23:38:23.3123913",
+    "message": "LTS108 - Application Error"
+   }
+   
   
   Technical Explaination - 
    Request flows from LocationTrackerController ->processDirection method which evaluates emailid, post validation of emailId it make connection to server to get list of
@@ -68,6 +85,14 @@ API Details
         "y": <Integer Value>
     }
    } 
+   example-  
+  {
+     "emailId": "test@gmail.com",
+     "coordinates": {
+        "x": 5,
+        "y": 8
+    }
+  }
   
    Response Body -
    {
@@ -109,6 +134,7 @@ API Details
    5. few values are set as yml file level like context path & server side url
    6. Utilities are created for email validation and getting coordinates.
    7. WebClient is Used to retrieve response from Server.
+   8. Project Structure is seperated as Controller -> SERVICE -> DAO
    
   
   Next Steps -
@@ -117,4 +143,18 @@ API Details
   3. More Exception handling scenarios can be added.
   4. URL can be made secured using JWT based Authentication and Authorisation
 
+ API Screenshots
+ 
+ API 1- 
+ 
+ ![image](https://user-images.githubusercontent.com/86582547/134088175-c56503d1-1924-4528-9ee7-0a51e4290efe.png)
+
+ API 2- 
+ 
+ ![image](https://user-images.githubusercontent.com/86582547/134088291-bf7d678f-b5e3-405a-b975-3a464fe9e290.png)
+
+ 
+ 
+ 
+ 
 
