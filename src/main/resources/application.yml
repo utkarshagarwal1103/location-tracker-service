@@ -4,4 +4,4 @@ server:
 
 com:
   which:
-    url: http://whic-technical-exercise.herokuapp.com
+    url: http://which-technical-exercise.herokuapp.com
