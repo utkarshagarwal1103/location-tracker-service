@@ -20,20 +20,20 @@
 HTTP Method- GET
 URL- http://localhost:8080/which/location-tracker-service/actuator/health
 
-This api will respond with below Json data
+This api will respond with below Json data<br>
 {
   "status": "UP"
 }
 
-If you are seeing above JSON Response, that means you Application is Up and Running
+If you are seeing above JSON Response, that means you Application is Up and Running<br>
 
 API Details
-1. HTTP Method- POST
-   URL- http://localhost:8080/which/location-tracker-service/coordinates
-   Request Body - 
+1. HTTP Method- POST<br>
+   URL- http://localhost:8080/which/location-tracker-service/coordinates<br>
+   Request Body - <br>
    {
     "emailId": <Email id>
-   }
+   }<br>
    example- 
    {
     "emailId": "test@gmail.com"
@@ -45,7 +45,7 @@ API Details
         "x": Integer_Value,
         "y": Integer_Value
     }
-  }
+  }<br>
   example- 
    {
     "coordinates": {
@@ -67,7 +67,7 @@ API Details
    {
     "timestamp": "2021-09-20T23:38:23.3123913",
     "message": "<ErrorCode> - Application Error"
-   }
+   }<br>
    example -
    {
     "timestamp": "2021-09-20T23:38:23.3123913",
@@ -75,22 +75,22 @@ API Details
    }
    
   
-  Technical Explaination - 
+  Technical Explaination - <br>
    Request flows from LocationTrackerController ->processDirection method which evaluates emailid, post validation of emailId it make connection to server to get list of
    direction(LocationTrackerService ->LocationTrackerDao)
    Once list is retieved it evaluates coordinates using utility DirectionUtil.
   
 
-2. HTTP Method- POST
-   URL - http://localhost:8080/which/location-tracker-service/validate
-   Request Body - You can use coordinates from previous response as well
+2. HTTP Method- POST<br>
+   URL - http://localhost:8080/which/location-tracker-service/validate<br>
+   Request Body - You can use coordinates from previous response as well<br>
   {
      "emailId": <Email id>,
      "coordinates": {
         "x": <Integer Value>,
         "y": <Integer Value>
     }
-   } 
+   } <br>
    example-  
   {
      "emailId": "test@gmail.com",
@@ -100,13 +100,13 @@ API Details
     }
   }
   
-   Response Body -
+   Response Body -<br>
    {
     "status": "SUCCESS/FAILURE",
     "message": "<Message recieved from Server>"
    }
   
-   Error Responses -
+   Error Responses -<br>
    1. 400 Bad Request -
     {
     "timestamp": "2021-09-20T23:34:34.5371044",
@@ -115,19 +115,19 @@ API Details
               ]
     }
   
-   2. 500 Internal Error -
+   2. 500 Internal Error -<br>
    {
     "timestamp": "2021-09-20T23:38:23.3123913",
     "message": "<ErrorCode> - Application Error"
    }
   
   
-   Technical Explaination - 
+   Technical Explaination - <br>
    Request flows from LocationTrackerController ->processCoordinates method which evaluates emailid, post validation of emailId it make connection to server to validate
    coordinates provided (LocationTrackerService ->LocationTrackerDao)
    Once response is recieved it evaluates SUCCESS/FAILURE based on message.
   
-  Project Structure
+  Project Structure<br>
   
   ![image](https://user-images.githubusercontent.com/86582547/134086899-b4609211-ecb1-4d58-8790-b33ca0f092fe.png)
 
