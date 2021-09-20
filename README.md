@@ -3,13 +3,13 @@
  This Project is RestClient service which retrieve directions from Downstream server side api and evaluates the coordinates.
  Once Coordinates are evaluated.Its verifies with Server side api.
  
- Language - Java
+ Language - Java<br>
  Version -  1.8
  
- Prerquisite to run on local-
- 1.Java 1.8 should be installed
- 2.Maven should be configured
- 3.Should have any IDE( Intellij/Eclipse)
+ Prerquisite to run on local-<br>
+ 1.Java 1.8 should be installed<br>
+ 2.Maven should be configured<br>
+ 3.Should have any IDE( Intellij/Eclipse)<br>
  
  Step to Execute on Local
 1. Clone the repository - git clone https://github.com/utkarshagarwal1103/location-tracker-service.git
@@ -141,6 +141,7 @@ API Details
    6. Utilities are created for email validation and getting coordinates.
    7. WebClient is Used to retrieve response from Server.
    8. Project Structure is seperated as Controller -> SERVICE -> DAO
+   9. Health check is added to check service status
    
   
   Next Steps -
