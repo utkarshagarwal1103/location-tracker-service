@@ -6,11 +6,17 @@
  Language - Java
  Version -  1.8
  
+ Prerquisite to run on local-
+ 1.Java 1.8 should be installed
+ 2.Maven should be configured
+ 3.Should have any IDE( Intellij/Eclipse)
+ 
  Step to Execute on Local
-1. Clone the repository
-2. Run the Spring boot project using maven or Spring boot main Application file - LocationTrackerServiceApplication.java
-3. Verify Spring boot application is started succesfully on console using port 8080, 
-4. Verify using actuator service for health check on browser/Postman
+1. Clone the repository - git clone https://github.com/utkarshagarwal1103/location-tracker-service.git
+2. Import the project in IntelliJ/Eclipse.Wait untill all the dependecies are downloaded.
+3. Run the Spring boot project using maven or Spring boot main Application file - LocationTrackerServiceApplication.java
+4. Verify Spring boot application is started succesfully on console using port 8080, 
+5. Verify using actuator service for health check on browser/Postman
 HTTP Method- GET
 URL- http://localhost:8080/which/location-tracker-service/actuator/health
 
